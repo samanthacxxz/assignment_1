@@ -20,3 +20,11 @@ const starwarsFilms = JSON.parse(localStorage.getItem("filmData"));
 document.addEventListener("DOMContentLoaded", () => {
     renderData(starwarsFilms);
 });
+
+//rendering the film data to the page
+
+const renderFilmData = (storedFilmData) => {
+    if (storedFilmData) {
+        
+    }
+}
