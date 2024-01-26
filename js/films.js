@@ -1,10 +1,15 @@
+// elements
+
+const filmDataDisplay = document.querySelector('.data_display');
+
+
 // retrieving data from the Star Wars film resources
 
 const filmData = () => {
     fetch("http://swapi.dev/api/films")
     .then(response => response.json())
-    .then (data => console.log(data.results))
-}
+    .then (data => console.log(data.results));
+};
 
 filmData();
 
@@ -22,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //rendering the film data to the page
+
 
 const renderFilmData = (storedFilmData) => {
     if (storedFilmData) {
