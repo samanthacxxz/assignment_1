@@ -12,6 +12,12 @@ header {
     grid-template-columns: repeat(3, 1fr);
 }
 
+section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .starwars_categories {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
