@@ -12,3 +12,10 @@ a {
 a:hover {
     color: aliceblue;
 }
+
+button {
+    border: none;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+}
