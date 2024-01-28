@@ -20,6 +20,33 @@ section {
 
 .starwars_categories {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.category {
+    width: 300px;
+    height: 600px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+}
+
+.category_films {
+    background-image: url(../assets/images/starwars_category_film.jpeg);
+}
+
+.category_people {
+    background-image: url(../assets/images/starwars_category_people.jpeg);
+}
+
+.category_planets {
+    background-image: url(../assets/images/starwars_category_planets.jpeg);
+}
+
+.category_vehicles {
+    background-image: url(../assets/images/starwars_category_vehicles.jpg);
 }
