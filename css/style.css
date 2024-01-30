@@ -1,11 +1,3 @@
-html {
-    background-image: url(../assets/images/starwars_background.jpeg);
-    background-repeat: repeat;
-    background-size: cover;
-    font-family: 'Outfit-Medium';
-    color: white;
-}
-
 
 header {
     width: 100%;
