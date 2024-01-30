@@ -1,6 +1,11 @@
 html {
-    background-color: rgb(89, 89, 134);
+    background-image: url(../assets/images/starwars_background.jpeg);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Outfit-Medium';
+    color: white;
 }
+
 
 header {
     width: 100%;
@@ -11,6 +16,9 @@ header {
     grid-template-columns: repeat(3, 1fr);
 }
 
+h1 {
+    padding: 50px;
+}
 
 .starwars_logo-container {
     display: flex;
@@ -44,6 +52,12 @@ section {
     align-items: center;
 
     background-size: cover;
+    transition: background 400ms ease-out;
+
+}
+
+.link:hover {
+    background-color: darkblue;
 }
 
 .category_films {
