@@ -21,3 +21,10 @@ h1 {
     height: 120px;
     background-repeat: no-repeat;
 }
+
+.starwars-title {
+    font-size: xx-large;
+    text-align: center;
+
+    padding: 50px;
+}
