@@ -10,6 +10,7 @@ fetch('http://swapi.dev/api/films')
 .then(films => {
     console.log(films.results)
     renderFilmData(films.results)
+    showDetails(films.results)
 });
 
 // rendering the data retrieved from API, appending to the page
@@ -56,7 +57,19 @@ function renderFilmData(films) {
         filmEpisodeID.style.display = 'none';
 
     });
+
+
     
-    showDetails(filmItem)
 } 
+
 // display properties when clicking the title button
+
+filmTitleButton = showDetails(film.title)
+    
+filmTitleButton.addEventlistener('click', showDetails)
+
+function showDetails(film) {
+    filmsArray = film.entries(film);
+    console.log(filmsArray)
+}
+showDetails(film);
