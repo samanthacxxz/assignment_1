@@ -2,7 +2,7 @@
 
 const ul = document.querySelector('ul');
 
-// retrieve data from HTTP - films 
+// retrieve data from HTTP - vehicles 
 
 
 fetch('http://swapi.dev/api/vehicles')
@@ -15,7 +15,7 @@ fetch('http://swapi.dev/api/vehicles')
 
 function renderVehiclesData(vehicles) {
     vehicles.forEach(vehicle => {
-        // creating a list for each film
+        // creating a list for each vehicle
         const li = document.createElement('li');
 
         const vehicleName = document.createElement('div');

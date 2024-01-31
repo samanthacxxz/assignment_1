@@ -2,7 +2,7 @@
 
 const ul = document.querySelector('ul');
 
-// retrieve data from HTTP - films 
+// retrieve data from HTTP - people 
 
 
 fetch('http://swapi.dev/api/people')
@@ -15,7 +15,7 @@ fetch('http://swapi.dev/api/people')
 
 function renderPeopleData(people) {
     people.forEach(person => {
-        // creating a list for each film
+        // creating a list for each person
         const li = document.createElement('li');
 
         const personName = document.createElement('div');

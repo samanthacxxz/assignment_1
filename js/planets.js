@@ -2,7 +2,7 @@
 
 const ul = document.querySelector('ul');
 
-// retrieve data from HTTP - films 
+// retrieve data from HTTP - planets 
 
 
 fetch('http://swapi.dev/api/planets')
@@ -15,7 +15,7 @@ fetch('http://swapi.dev/api/planets')
 
 function renderPlanetsData(planets) {
     planets.forEach(planet => {
-        // creating a list for each film
+        // creating a list for each planet
         const li = document.createElement('li');
 
         const planetName = document.createElement('div');
