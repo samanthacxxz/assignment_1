@@ -18,7 +18,7 @@ function renderPeopleData(people) {
         // creating a list for each person
         const li = document.createElement('li');
 
-        const personName = document.createElement('div');
+        const personName = document.createElement('button');
         const personGender = document.createElement('div');
         const personHeight = document.createElement('div');
         const personHairColor = document.createElement('div');
@@ -33,6 +33,13 @@ function renderPeopleData(people) {
         personHeight.classList.add('person-height');
         personHairColor.classList.add('person-hair-color');
         personEyeColor.classList.add('person-eye-color');
+
+        // not displaying the property to page yet except for the title
+
+        personGender.classList.add('people-property');
+        personHeight.classList.add('people-property');
+        personHairColor.classList.add('people-property');
+        personEyeColor.classList.add('people-property');
         
         // appending the elements to the page 
 
@@ -41,11 +48,23 @@ function renderPeopleData(people) {
 
         //adding content 
 
-        personName.textContent = `Name: ${person.name}`;
+        personName.textContent = person.name;
         personGender.textContent = `Gender: ${person.gender}`;
         personHeight.textContent = `Height: ${person.height}`;
         personHairColor.textContent = `Hair Color ${person.hair_color}`;
         personEyeColor.textContent = `Eye Color: ${person.eye_color}`;
 
+        // display properties when clicking the title button
+
+
+        personName.addEventListener('click', () => {
+
+            personName.classList.toggle('people-property--visible');
+            personGender.classList.toggle('people-property--visible');
+            personHeight.classList.toggle('people-property--visible');
+            personHairColor.classList.toggle('people-property--visible');
+            personEyeColor.classList.toggle('people-property--visible');
+people
+        });
     });
 }
