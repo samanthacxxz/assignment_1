@@ -10,11 +10,7 @@ fetch('http://swapi.dev/api/films')
 .then(films => {
     console.log(films.results)
     renderFilmData(films.results)
-   
-    /*const response = await fetch ('http://swapi.dev/api/films');
-    const result = await response.json();
-    console.log(result);
-    renderFilmData(result.data)*/
+
 });
 
 function renderFilmData(films) {
