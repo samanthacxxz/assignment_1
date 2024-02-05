@@ -49,7 +49,7 @@ function renderVehiclesData(vehicles) {
 
         //adding content 
 
-        vehicleName.textContent = `Name: ${vehicle.name}`;
+        vehicleName.textContent = vehicle.name;
         vehicleModel.textContent = `Model: ${vehicle.model}`;
         vehicleManufacturer.textContent = `Manufacturer: ${vehicle.manufacturer}`;
         vehiclePassengers.textContent = `Passengers ${vehicle.passengers}`;
