@@ -26,7 +26,7 @@ function renderPeopleData(people) {
 
         // adding classes
         
-        li.classList.add('filmItem')
+        li.classList.add('people-item');
 
         personName.classList.add('person-name');
         personGender.classList.add('person-gender');
@@ -64,7 +64,6 @@ function renderPeopleData(people) {
             personHeight.classList.toggle('people-property--visible');
             personHairColor.classList.toggle('people-property--visible');
             personEyeColor.classList.toggle('people-property--visible');
-people
         });
     });
 }
