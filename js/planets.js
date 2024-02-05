@@ -18,7 +18,7 @@ function renderPlanetsData(planets) {
         // creating a list for each planet
         const li = document.createElement('li');
 
-        const planetName = document.createElement('div');
+        const planetName = document.createElement('button');
         const planetClimate = document.createElement('div');
         const planetGravity = document.createElement('div');
         const planetSurfaceWater = document.createElement('div');
@@ -33,6 +33,13 @@ function renderPlanetsData(planets) {
         planetGravity.classList.add('planet-gravity');
         planetSurfaceWater.classList.add('planet-surface-water');
         planetTerrain.classList.add('planet-terrain');
+
+        // not displaying the property to page yet except for the title
+
+        planetClimate.classList.add('planet-property');
+        planetGravity.classList.add('planet-property');
+        planetSurfaceWater.classList.add('planet-property');
+        planetTerrain.classList.add('planet-property');
         
         // appending the elements to the page 
 
@@ -41,11 +48,22 @@ function renderPlanetsData(planets) {
 
         //adding content 
 
-        planetName.textContent = `Name: ${planet.name}`;
+        planetName.textContent = planet.name;
         planetClimate.textContent = `Climate: ${planet.climate}`;
         planetGravity.textContent = `Gravity: ${planet.gravity}`;
         planetSurfaceWater.textContent = `Surface Water ${planet.surface_water}`;
         planetTerrain.textContent = `Terrain: ${planet.terrain}`;
 
+         // display properties when clicking the title button
+
+
+         planetName.addEventListener('click', () => {
+
+            planetName.classList.toggle('planet-property--visible');
+            planetClimate.classList.toggle('planet-property--visible');
+            planetGravity.classList.toggle('planet-property--visible');
+            planetSurfaceWater.classList.toggle('planet-property--visible');
+            planetTerrain.classList.toggle('planet-property--visible');
+        });
     });
 }
