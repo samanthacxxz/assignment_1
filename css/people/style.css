@@ -48,9 +48,8 @@ ul {
 
 }
 
-.person-name {
-    background-color: transparent;
-    color: white;
+.person-title {
+    cursor: pointer;
 }
 
 .person-name, .person-gender, .person-height,

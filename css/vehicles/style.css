@@ -30,6 +30,10 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
+.vehicle-title {
+    cursor: pointer;
+}
+
 .vehicle-property {
     display: none;
 }

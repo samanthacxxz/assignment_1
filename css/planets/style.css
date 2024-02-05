@@ -30,6 +30,10 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
+.planet-title {
+    cursor: pointer;
+}
+
 .planet-property {
     display: none;
 }

@@ -32,6 +32,10 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
+.film-title {
+    cursor: pointer;
+}
+
 .film-property {
     display: none;
 }
