@@ -19,7 +19,7 @@ function renderFilmData(films) {
         // creating a list for each film
         const li = document.createElement('li');
 
-        const filmTitle = document.createElement('button');
+        const filmTitle = document.createElement('div');
         const filmProducer = document.createElement('div');
         const filmReleaseDate = document.createElement('div');
         const filmDirector = document.createElement('div');

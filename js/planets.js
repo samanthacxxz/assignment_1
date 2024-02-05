@@ -18,7 +18,7 @@ function renderPlanetsData(planets) {
         // creating a list for each planet
         const li = document.createElement('li');
 
-        const planetName = document.createElement('button');
+        const planetName = document.createElement('div');
         const planetClimate = document.createElement('div');
         const planetGravity = document.createElement('div');
         const planetSurfaceWater = document.createElement('div');

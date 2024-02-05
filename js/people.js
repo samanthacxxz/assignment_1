@@ -18,7 +18,7 @@ function renderPeopleData(people) {
         // creating a list for each person
         const li = document.createElement('li');
 
-        const personName = document.createElement('button');
+        const personName = document.createElement('div');
         const personGender = document.createElement('div');
         const personHeight = document.createElement('div');
         const personHairColor = document.createElement('div');
