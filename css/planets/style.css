@@ -30,7 +30,7 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.planet-title {
+.planet-title:hover {
     cursor: pointer;
 }
 

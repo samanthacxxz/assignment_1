@@ -30,7 +30,7 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.vehicle-title {
+.vehicle-title:hover {
     cursor: pointer;
 }
 

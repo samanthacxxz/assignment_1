@@ -48,7 +48,7 @@ ul {
 
 }
 
-.person-title {
+.person-title:hover {
     cursor: pointer;
 }
 

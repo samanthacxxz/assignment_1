@@ -32,7 +32,7 @@ ul {
     grid-template-rows: repeat(2, 1fr);
 }
 
-.film-title {
+.film-title:hover {
     cursor: pointer;
 }
 
