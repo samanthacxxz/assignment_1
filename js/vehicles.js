@@ -26,7 +26,7 @@ function renderVehiclesData(vehicles) {
 
         // adding classes
         
-        li.classList.add('planetItem')
+        li.classList.add('vehicleItem')
 
         vehicleName.classList.add('vehicle-name');
         vehicleModel.classList.add('vehicle-model');
@@ -34,6 +34,14 @@ function renderVehiclesData(vehicles) {
         vehiclePassengers.classList.add('vehicle-passengers');
         vehicleVehicleClass.classList.add('vehicle-vehicle-class');
         
+         // not displaying the property to page yet except for the title
+
+         vehicleModel.classList.add('vehicle-property');
+         vehicleManufacturer.classList.add('vehicle-property');
+         vehiclePassengers.classList.add('vehicle-property');
+         vehicleVehicleClass.classList.add('vehicle-property');
+
+
         // appending the elements to the page 
 
         ul.append(li)
@@ -47,5 +55,16 @@ function renderVehiclesData(vehicles) {
         vehiclePassengers.textContent = `Passengers ${vehicle.passengers}`;
         vehicleVehicleClass.textContent = `Vehicle Class: ${vehicle.vehicle_class}`;
 
+        // display properties when clicking the title button
+
+
+        vehicleName.addEventListener('click', () => {
+
+            vehicleName.classList.toggle('vehicle-property--visible');
+            vehicleModel.classList.toggle('vehicle-property--visible');
+            vehicleManufacturer.classList.toggle('vehicle-property--visible');
+            vehiclePassengers.classList.toggle('vehicle-property--visible');
+            vehicleVehicleClass.classList.toggle('vehicle-property--visible');
+        });
     });
 }
