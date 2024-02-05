@@ -64,7 +64,6 @@ function renderPeopleData(people) {
             personHeight.classList.toggle('people-property--visible');
             personHairColor.classList.toggle('people-property--visible');
             personEyeColor.classList.toggle('people-property--visible');
-people
         });
     });
 }
