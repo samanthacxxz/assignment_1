@@ -15,36 +15,34 @@
         <div></div>
         <div class="starwars_logo-container">
             <button class="starwars_logo_button">
-                <img src="/assets/images/starwars_home_logo.png" alt="" srcset="">
+                <img src="/assets/images/starwars_home_logo.jpg" alt="" srcset="">
             </button>
         </div>
         <div></div>
     </header>
 
-    <main>
-        <section>
+    <main class="main-section">
+        <section class="categories-section">
             <h1>What information of the Star Wars universe piques your interest?</h1>
-            <div>
-                <ul class="starwars_categories">
-                    <div class="starwars_category category category_films"">
-                        <a href="./categories/films.html" class="link">Star Wars Films</a>
-                    </div>
-
-                    <div class="starwars_category category category_people">
-                        <a href="" class="link">Star Wars people</a>
-
-                    </div>
-
-                    <div class="starwars_category category category_planets">
-                        <a href="" class="link">Star Wars planets</a>
-                    </div>
-
-                    <div class="starwars_category category category_vehicles">
-                        <a href="" class="link">Star Wars vehicles</a>
-                    </div>
-                </ul>
-            </div>
+            <ul class="starwars_categories">
+                <button class="starwars_category category category_films"">
+                    Star Wars Films
+                </button>
+                <button class="starwars_category category category_people">
+                    Star Wars Characters
+                </button>
+                <button class="starwars_category category category_planets">
+                    Star Wars Planets
+                </button>
+                <button class="starwars_category category category_vehicles">
+                    Star Wars Vehicles
+                </button>
+            </ul>
         </section>
+        <section class="film-display"></section>
+        <section class="people-display"></section>
+        <section class="planets-display"></section>
+        <section class="vehicles-display"></section>
     </main>
 </body>
 <script src="js/app.js" type=""></script>
