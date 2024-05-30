@@ -34,9 +34,9 @@ section {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.category {
+.starwars_categories button {
     width: 300px;
-    height: 600px;
+    height: 200px;
 
     display: flex;
     flex-flow: column;
@@ -48,22 +48,53 @@ section {
 
 }
 
-.link:hover {
+.starwars_categories button:hover {
     background-color: darkblue;
+    color:brown;
 }
 
-.category_films {
+.category-films {
     background-image: url(../assets/images/starwars_category_film.jpeg);
 }
 
-.category_people {
+.category-people {
     background-image: url(../assets/images/starwars_category_people.jpeg);
 }
 
-.category_planets {
+.category-planets {
     background-image: url(../assets/images/starwars_category_planets.jpeg);
 }
 
-.category_vehicles {
+.category-vehicles {
     background-image: url(../assets/images/starwars_category_vehicles.jpg);
+}
+
+/* CATEGORIES SECTION DISPLAYS */
+.film-display {
+    visibility: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+}
+
+.people-display {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+}
+
+.planets-display {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+}
+
+.vehicles-display {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
 }
