@@ -1,0 +1,51 @@
+@media (max-width: 1320px){
+    .starwars_categories {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repear(2, 1fr);
+    }
+}
+
+@media (max-width: 810px) {
+    h1 {
+       padding: 20px;
+    }
+
+    .film-ul {
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: repeat(5, 200px);
+    }
+
+    .people-ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 200px);
+    }
+
+    .planets-ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 200px);
+    }
+    
+    .vehicles-ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 200px);
+    }
+}
+
+
+
+
+@media (max-width: 510px) {
+    html {
+        font-size: 12px;
+    }
+    .starwars_categories button {
+        width: 100px;
+        height: 50px;
+    }
+    .category-films,
+    .category-people,
+    .category-planets,
+    .category-vehicles {
+        background-image: none;
+    }
+}
