@@ -4,7 +4,6 @@ const ul = document.querySelector('ul');
 
 // retrieve data from HTTP - people 
 
-
 fetch('http://swapi.dev/api/people')
 .then(response => response.json())
 .then(people => {

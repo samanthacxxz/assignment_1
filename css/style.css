@@ -71,30 +71,41 @@ section {
 
 /* CATEGORIES SECTION DISPLAYS */
 .film-display {
-    visibility: hidden;
+    display: none;
+}
 
+.film-ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
 }
 
 .people-display {
-    visibility: hidden;
+    display: none;
+}
+
+.people-ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(4, 250px);  
 }
 
 .planets-display {
-    visibility: hidden;
+    display: none;
+}
+
+.planets-ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(2, 250px);  
 }
 
 .vehicles-display {
-    visibility: hidden;
+    display: none;
+}
+
+.vehicles-ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(2, 250px);  
 }

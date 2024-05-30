@@ -17,16 +17,22 @@ const vehiclesDisplay = document.querySelector('.vehicles-display');
 // EVENT LISTENERS TO BUTTONS 
 
 filmCategoryButton.addEventListener('click', ()=> {
-    filmDisplay.style.visibility = 'visible';
-    peopleDisplay.style.visibility = 'hidden';
-    planetsDisplay.style.visibility = 'hidden';
-    vehiclesDisplay.style.visibility = 'hidden';
+    filmDisplay.style.display = 'flex';
+    peopleDisplay.style.display = 'none';
+    planetsDisplay.style.display = 'none';
+    vehiclesDisplay.style.display = 'none';
     displayFilmData();
 })
 
+peopleCategoryButton.addEventListener('click', ()=> {
+    filmDisplay.style.display = 'none';
+    peopleDisplay.style.display = 'flex';
+    planetsDisplay.style.display = 'none';
+    vehiclesDisplay.style.display = 'none';
+    displayPeopleData();
+})
 
 // DISPLAY FILM SECTION
-
 function displayFilmData() {
 
     // FETCH FROM API
@@ -37,7 +43,7 @@ function displayFilmData() {
         renderFilmData(films.results)
     });
 
-    const ul = document.querySelector('ul');
+    const ul = document.querySelector('.film-ul');
 
     // RENDER THE DATA RETRIEVED FROM API
     function renderFilmData(films) {
@@ -53,20 +59,14 @@ function displayFilmData() {
     
             // adding classes
             
-            li.classList.add('filmItem')
+            li.classList.add('item')
     
             filmTitle.classList.add('film-title');
             filmProducer.classList.add('film-producer');
             filmReleaseDate.classList.add('film-releasedate');
             filmDirector.classList.add('film-director');
             filmEpisodeID.classList.add('film-episodeID');
-    
-            // not displaying the property to page yet except for the title
-    
-            filmProducer.classList.add('film-property');
-            filmReleaseDate.classList.add('film-property');
-            filmDirector.classList.add('film-property');
-            filmEpisodeID.classList.add('film-property');
+
     
             // appending the elements to the page 
     
@@ -80,21 +80,58 @@ function displayFilmData() {
             filmReleaseDate.textContent = `Release Date: ${film.release_date}`;
             filmDirector.textContent = `Director ${film.director}`;
             filmEpisodeID.textContent = `Èpisode ID: ${film.episode_id}`;
-    
-            // display properties when clicking the title button
-    
-            
-            filmTitle.addEventListener('click', () => {
-    
-                filmTitle.classList.toggle('film-property--visible');
-                filmProducer.classList.toggle('film-property--visible');
-                filmReleaseDate.classList.toggle('film-property--visible');
-                filmDirector.classList.toggle('film-property--visible');
-                filmEpisodeID.classList.toggle('film-property--visible');
-    
-            }); 
         });
-        ;
-    } 
+        
+    } ;
     
+}
+
+function displayPeopleData() {
+
+    //FETCH PEOPLE DATA
+    fetch('http://swapi.dev/api/people')
+    .then(response => response.json())
+    .then(people => {
+        console.log(people.results)
+        renderPeopleData(people.results)
+    });
+    
+    const ul = document.querySelector('.people-ul');
+
+    //RENDER PEOPLE DATA
+    function renderPeopleData(people) {
+        people.forEach(person => {
+            // creating a list for each person
+            const li = document.createElement('li');
+    
+            const personName = document.createElement('div');
+            const personGender = document.createElement('div');
+            const personHeight = document.createElement('div');
+            const personHairColor = document.createElement('div');
+            const personEyeColor = document.createElement('div');
+    
+            // adding classes
+            
+            li.classList.add('item');
+    
+            personName.classList.add('person-name');
+            personGender.classList.add('person-gender');
+            personHeight.classList.add('person-height');
+            personHairColor.classList.add('person-hair-color');
+            personEyeColor.classList.add('person-eye-color');
+            
+            // appending the elements to the page 
+    
+            ul.append(li)
+            li.append(personName, personGender, personHeight, personHairColor, personEyeColor);
+    
+            //adding content 
+    
+            personName.textContent = person.name;
+            personGender.textContent = `Gender: ${person.gender}`;
+            personHeight.textContent = `Height: ${person.height}`;
+            personHairColor.textContent = `Hair Color ${person.hair_color}`;
+            personEyeColor.textContent = `Eye Color: ${person.eye_color}`;
+        });
+    };
 }

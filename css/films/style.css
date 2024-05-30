@@ -26,7 +26,7 @@ h1 {
 
 /* main container styles - display of films */
 
-ul {
+.film-display {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);

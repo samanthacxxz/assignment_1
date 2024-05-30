@@ -62,3 +62,10 @@ ul {
 .people-property--visible {
     display: block;
 }
+
+/* STYLES FOR CATEGORIES SECTIONS*/
+
+.film-display {
+    display: flex;
+}
+
