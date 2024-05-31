@@ -52,7 +52,7 @@ vehiclesCategoryButton.addEventListener('click', ()=> {
 function displayFilmData() {
 
     // FETCH FROM API
-    fetch('http://swapi.dev/api/films')
+    fetch('https://swapi.dev/api/films')
     .then(response => response.json())
     .then(films => {
         console.log(films.results)
@@ -105,7 +105,7 @@ function displayFilmData() {
 function displayPeopleData() {
 
     //FETCH PEOPLE DATA
-    fetch('http://swapi.dev/api/people')
+    fetch('https://swapi.dev/api/people')
     .then(response => response.json())
     .then(people => {
         console.log(people.results)
@@ -157,7 +157,7 @@ function displayPeopleData() {
 function displayPlanetsData() {
 
     // retrieve data - planets 
-    fetch('http://swapi.dev/api/planets')
+    fetch('https://swapi.dev/api/planets')
     .then(response => response.json())
     .then(planets => {
         console.log(planets.results)
@@ -207,7 +207,7 @@ function displayPlanetsData() {
 
 function displayVehiclesData() {
     // retrieve data from HTTP - vehicles 
-    fetch('http://swapi.dev/api/vehicles')
+    fetch('https://swapi.dev/api/vehicles')
     .then(response => response.json())
     .then(vehicles => {
         console.log(vehicles.results)
